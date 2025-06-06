@@ -10,21 +10,20 @@ body{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.11);
-    padding-left: 22vh;
-    padding-right: 22vh;
+    padding-left: 15.1vw;
+    padding-right: 15.1vw;
 }
 
     .header__bottom{
         grid-area: "hero-top";
         background-color: rgba(187, 99, 99, 0.11);
         display: flex;
-        justify-content: center;
-        gap: 9vh;
+        gap: 4.51vw;
     }
 
 .nav{
     display: grid;
-    grid-template-columns: 38vw 68vw;
+    grid-template-columns: 22vw 48vw;
 }
 
     /* ELEMENTS */
@@ -41,19 +40,22 @@ body{
 
 
 main{
-    margin: 0 22vh 0 22vh;
+
 }
 
 /* BLOCK-HERO */
 
 .hero{
+    padding: 0 15.1vw 0 15.1vw;
+    background-color: rgba(187, 99, 99, 0.11);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
     "hero-main" 
     "hero__important-discount"
     "hero__important-info"
     "hero__promocional";
-    margin-top: 5vh;
+    padding-top: 3.8vh;
+    padding-bottom: 3.8vh;
     
 }
 
@@ -67,37 +69,89 @@ main{
     }
 
         .hero__img{
-            background-color: rgba(0, 0, 0, 0.11);
+            width: 100%;
+            border-radius: 6px;
         }
 
         .hero__products{
-            background-color: rgba(0, 0, 0, 0.11);
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(4, auto);
+            gap: 0.7vh;
+
         }
 
+            .products__item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                border-radius: 4px;
+                padding: 4px;
+                gap: 2px;
+            }
+
+                .item__img{
+                    width: 70%;
+                }
+
+                .item__name{
+                    margin: 0;
+                    font-size: 11px;
+                    font-family: Arial, sans-serif;
+                }
+
+
     .hero__important-discount{
+        margin-top: 5vh;
         grid-area: "hero__important-discount";
-        background-color: rgba(0, 0, 0, 0.11);
     }
 
     .hero__important-info{
+        margin-top: 2vh;
         grid-area: "hero__important-info";
-        background-color: rgba(0, 0, 0, 0.11);
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        background-color: white;
+        height: 4.5vh;
+        gap: 3.5vw;
     }
 
+        .important-info__items{
+            display: flex;
+            align-items: center;
+            gap: 0.8vw;
+        }
+
+            .important-info__img{
+                width: 10%
+            }
+
+            .important-info__info{
+                margin: 0;
+            }
+
     .hero__promocional{
-        margin-top: 5vh;
+        margin-top: 2.3vh;
         grid-area: "hero__promocional";
         background-color: antiquewhite;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1vh;
     }
+
+        .promocional__img{
+            border-radius: 6px;
+        }
 
 /* BLOCK PRODUCTS-SECTION */
 
 .products-section{
-    margin-top: 5vh;
+    padding: 0 15.1vw 0 15.1vw;
+    padding-top: 5vh;
     display: grid;
     grid-template-rows: repeat(10, 1fr);
     gap: 5vh;
@@ -105,37 +159,131 @@ main{
 
     /* ELEMENTS */
 
-    .products-section__products{
+    .products-section__articles{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        background-color: rgba(0, 0, 0, 0.11);
+        gap: 0.5vw;
     }
+
+        .products__title{
+            margin: 0;
+            padding-bottom: 2.5vh;
+        }
+
+        .article__img{
+            border-radius: 4px;
+        }
 
     .products-section__eight-products{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2vh;
-
     }
 
-        .eigth-products__block-one, .eigth-products__block-two{
+        .eigth-products__group-one{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: rgba(0, 0, 0, 0.11);
+            padding: 16px;
+        }
+
+            .group-one__info{
+                grid-column: 1 / -1;
+                display: flex;
+                align-items: center;
+            }
+
+        .text__title{
+            margin: 0;
+        }
+
+        .text__paragraph{
+            margin: 0;
+        }
+
+
+
+        .eigth-products__group-two{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             background-color: rgba(0, 0, 0, 0.11);
-
         }
+
+
 
 .products-section__discount-info{
     background-color: rgba(0, 0, 0, 0.11);
 }
 
+/* BLOCK */
+
 .products-section__kombos{
-    
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 2vh;
+}
+
+    /* ELEMENTS */
+
+    .kombos__block-one{
+        background-color: aquamarine;
+    }
+
+    .kombos__block-two{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+
+/* BLOCK */
+
+.brands{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    background-color: rgba(0, 0, 0, 0.11);
 }
 
 
+.installation-section__services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+
 /* BLOCK */
+
+.pay-methods{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2vw;
+
+}
+    /* ELEMENTS */
+
+    .pay-methods__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+
+    .pay-methods__methods-info{
+        grid-column: 1 / -1;
+    }
+
+        .methods-info__methods{
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            background-color: rgba(0, 0, 0, 0.11);
+        }
+
 
 
 
