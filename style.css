@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+}
+
+
+
+/* BLOCK-NAV */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.11);
+    padding-left: 22vh;
+    padding-right: 22vh;
+}
+
+    .header__bottom{
+        grid-area: "hero-top";
+        background-color: rgba(187, 99, 99, 0.11);
+        display: flex;
+        justify-content: center;
+        gap: 9vh;
+    }
+
+.nav{
+    display: grid;
+    grid-template-columns: 38vw 68vw;
+}
+
+    /* ELEMENTS */
+
+    .nav__logo{
+        display: flex;
+    }
+
+    .nav__links{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+
+main{
+    margin: 0 22vh 0 22vh;
+}
+
+/* BLOCK-HERO */
+
+.hero{
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "hero-main" 
+    "hero__important-discount"
+    "hero__important-info"
+    "hero__promocional";
+    margin-top: 5vh;
+    
+}
+
+    /* ELEMENTS */
+
+    .hero__main{
+        grid-area: "hero-main";
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vh;
+    }
+
+        .hero__img{
+            background-color: rgba(0, 0, 0, 0.11);
+        }
+
+        .hero__products{
+            background-color: rgba(0, 0, 0, 0.11);
+        }
+
+    .hero__important-discount{
+        grid-area: "hero__important-discount";
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+
+    .hero__important-info{
+        grid-area: "hero__important-info";
+        background-color: rgba(0, 0, 0, 0.11);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero__promocional{
+        margin-top: 5vh;
+        grid-area: "hero__promocional";
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+/* BLOCK PRODUCTS-SECTION */
+
+.products-section{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 5vh;
+}
+
+    /* ELEMENTS */
+
+    .products-section__products{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+
+    .products-section__eight-products{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vh;
+
+    }
+
+        .eigth-products__block-one, .eigth-products__block-two{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            background-color: rgba(0, 0, 0, 0.11);
+
+        }
+
+.products-section__discount-info{
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.products-section__kombos{
+    
+}
+
+
+/* BLOCK */
+
+
+
+
+
