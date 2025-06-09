@@ -446,5 +446,45 @@ body{
   animation: rotate 2s linear infinite;
 }
 
+/* Animaciones de hover para cards */
+
+/* 1. Elevación simple (salto suave) */
+.card-hover-jump {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover-jump:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Bounce al hacer hover */
+@keyframes bounceHover {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-8px); }
+  50%  { transform: translateY(4px); }
+  70%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+.card-hover-bounce:hover {
+  animation: bounceHover 0.6s ease;
+}
+
+/* 3. Escalado suave al hacer hover */
+.card-hover-scale {
+  transition: transform 0.3s ease;
+}
+.card-hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* 4. Combinación de salto + escalado */
+.card-hover-combo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover-combo:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 
 
